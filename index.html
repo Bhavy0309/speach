@@ -205,7 +205,7 @@
                 messageDiv.textContent = `Searching Google for "${query}"...`;
                 openWebsite(`https://www.google.com/search?q=${encodeURIComponent(query)}`);
             },
-             "go back": () => {
+            "go back": () => {
                 messageDiv.textContent = `Going back`;
                 window.history.back();
             },
@@ -240,6 +240,42 @@
             "open website": (siteName) => {
                 messageDiv.textContent = `Opening ${siteName}...`;
                 openWebsite(siteName);
+            },
+            "open stopwatch": () => {
+                messageDiv.textContent = "Opening Stopwatch...";
+                openWebsite("stopwatch");
+            },
+            "open password maker": () => {
+                messageDiv.textContent = "Opening Password Maker...";
+                openWebsite("password maker");
+            },
+            "open qr code helper": () => {
+                messageDiv.textContent = "Opening QR Code Helper...";
+                openWebsite("qr code helper");
+            },
+            "open science helper": () => {
+                messageDiv.textContent = "Opening Science Helper...";
+                openWebsite("science helper");
+            },
+            "open math helper": () => {
+                messageDiv.textContent = "Opening Math Helper...";
+                openWebsite("math helper");
+            },
+            "open number guessing game": () => {
+                messageDiv.textContent = "Opening Number Guessing Game...";
+                openWebsite("number guessing game");
+            },
+            "open tic tac toe": () => {
+                messageDiv.textContent = "Opening Tic Tac Toe...";
+                openWebsite("tic tac toe");
+            },
+            "open speech recognition app": () => {
+                messageDiv.textContent = "Opening Speech Recognition App...";
+                openWebsite("speech recognition app");
+            },
+            "open chess game": () => {
+                messageDiv.textContent = "Opening Chess Game...";
+                openWebsite("chess game");
             }
         };
 
@@ -256,7 +292,7 @@
             { name: "Calculator", url: "https://calculate-helper.netlify.app" },
             { name: "Scratch", url: "https://scratch.mit.edu/" },
             { name: "Crazy Games", url: "https://www.crazygames.com/" },
-             { name: "Poki", url: "https://poki.com/" },
+            { name: "Poki", url: "https://poki.com/" },
             { name: "DuckDuckGo", url: "https://duckduckgo.com" },
             { name: "Yahoo", url: "https://www.yahoo.com" },
             { name: "Bing", url: "https://www.bing.com" },
@@ -283,6 +319,15 @@
             { name: "Salesforce", url: "https://www.salesforce.com" },
             { name: "Adobe", url: "https://www.adobe.com" },
             { name: "Canva", url: "https://www.canva.com" },
+            { name: "Stopwatch", url: "https://stop-watch-help.netlify.app" },
+            { name: "Password Maker", url: "https://passwords-maker.netlify.app" },
+            { name: "QR Code Helper", url: "https://code-qr-help.netlify.app" },
+            { name: "Science Helper", url: "https://science-helper.netlify.app" },
+            { name: "Math Helper", url: "https://math-helper-ai.netlify.app" },
+            { name: "Number Guessing Game", url: "https://numbers-guessing-ai.netlify.app" },
+            { name: "Tic Tac Toe", url: "https://tic-tac-toe-game-ing.netlify.app" },
+            { name: "Speech Recognition App", url: "https://speach-recognition.netlify.app" },
+            { name: "Chess Game", url: "https://sigma-chess-game.netlify.app" }
         ];
 
         function openWebsite(site) {
@@ -440,7 +485,7 @@
             urlSelection.addEventListener('change', () => {
                 openButton.disabled = !urlSelection.value.trim();
                 urlInput.value = "";
-                 if (urlSelection.value.trim()) {
+                if (urlSelection.value.trim()) {
                     openButton.classList.remove('hidden');
                     urlInput.classList.add('hidden');
                 }
